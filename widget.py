@@ -18,12 +18,13 @@ print(account_card_disguise
 
 
 def get_data(data_string:str) -> str:
+    ''' Функция преобразования даты '''
     data_conversion = (
     data_string[-18:-16],
     data_string[-22:-18],
     data_string[:-22])
 
-    return "".join( data_conversion)
+    return "".join(data_conversion)
 
 
 print(get_data('2018-07-11T02:26:18.671407'))
