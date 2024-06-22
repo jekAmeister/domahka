@@ -13,12 +13,13 @@ def account_card_disguise(string: str) -> any:
 
 
 print(account_card_disguise
-      ('Visa Platinum 8990922113665229')
-      )
+      ('Visa Platinum 8990922113665229'))
 
 
 def get_data(data_string:str) -> str:
     ''' Функция преобразования даты '''
+
+
     data_conversion = (
     data_string[-18:-16],
     data_string[-22:-18],
