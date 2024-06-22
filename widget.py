@@ -1,7 +1,7 @@
 from src.masks import get_mask_card_number, get_mask_account
 
 
-def account_card_disguise(string: str) -> any:
+def account_card_disguise(string: str) -> str:
 
     ''' Функция которая маскирует номер карты и счета '''
 
@@ -19,11 +19,7 @@ print(account_card_disguise
 def get_data(data_string:str) -> str:
     ''' Функция преобразования даты '''
 
-
-    data_conversion = (
-    data_string[-18:-16],
-    data_string[-22:-18],
-    data_string[:-22])
+    data_conversion = (data_string[-18:-16], data_string[-22:-18], data_string[:-22])
 
     return "".join(data_conversion)
 
