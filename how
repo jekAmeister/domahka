@@ -1,0 +1,41 @@
+[33mcommit 3f7845c5a07d9a3af586f02620a1fd8d307bbd76[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m
+Author: Евгений Соловьёв <jeka777925@gmail.com>
+Date:   Sat Jun 22 17:42:06 2024 +0300
+
+    gitignore
+
+[33mcommit b429873d2c895527f997e5b441b7eb24db19df28[m
+Author: Евгений Соловьёв <jeka777925@gmail.com>
+Date:   Sat Jun 22 17:35:58 2024 +0300
+
+    latest version
+
+[33mcommit 115520e0c9335e870123dbe1cc3bb281be767e9f[m
+Author: Евгений Соловьёв <jeka777925@gmail.com>
+Date:   Sat Jun 22 17:27:39 2024 +0300
+
+    fixes
+
+[33mcommit f945f582b7623cfa149bdc1b6342f4cad474ca61[m
+Author: Евгений Соловьёв <jeka777925@gmail.com>
+Date:   Sat Jun 22 16:14:23 2024 +0300
+
+    fixes
+
+[33mcommit 73c6e6ca1f75a459b597cfc58c8c42960f6d3f97[m
+Author: User <you@example.com>
+Date:   Sat Jun 22 15:13:21 2024 +0300
+
+    add get_data
+
+[33mcommit d64db024fa2e0e9167a1c1a0064bde447278ad89[m
+Author: User <you@example.com>
+Date:   Sat Jun 22 14:05:25 2024 +0300
+
+    add account_card_disguise
+
+[33mcommit 397484de9c163d6a2a968c1d2078ee7fbe91d849[m
+Author: User <you@example.com>
+Date:   Fri Jun 21 21:37:00 2024 +0300
+
+    add widget.py
