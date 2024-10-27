@@ -24,12 +24,10 @@ print(
 )
 
 
-def sort_by_date(dictionaries: list) -> list:
+def sort_by_date(dictionaries: list, reverse: bool = True) -> list:
     """Функция функцию, которая принимает на вход список словарей и возвращает новый список,
     в котором исходные словари отсортированы по убыванию даты (ключ date)"""
-    dictionaries_reverse = []
-    dictionaries_reverse = sorted(dictionaries, key=lambda dictionary: dictionary["date"], reverse=True)
-    return dictionaries_reverse
+    return sorted(dictionaries, key=lambda dictionary: dictionary["date"], reverse=True)
 
 
 print(
