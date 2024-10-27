@@ -1,7 +1,4 @@
-from typing import Any
-
-
-def filter_by_state(inform_state: list[dict[str, Any]], state_clue: object = "EXECUTED") -> Any:
+def filter_by_state(inform_state: list, state_clue: object = "EXECUTED") -> list:
     """Функция которая принимает на вход список словарей и значение для ключа
     state(опциональный параметр со значением по умолчанию EXECUTED)
     и возвращает новый список, содержащий только те словари, у которых ключ state
@@ -27,7 +24,7 @@ print(
 )
 
 
-def sort_by_date(dictionaries: list[dict[str, Any]]) -> Any:
+def sort_by_date(dictionaries: list) -> list:
     """Функция функцию, которая принимает на вход список словарей и возвращает новый список,
     в котором исходные словари отсортированыпо убыванию даты (ключ date)"""
     dictionaries_reverse = []
