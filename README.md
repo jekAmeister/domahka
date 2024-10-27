@@ -8,7 +8,7 @@
 
 1. Клонируйте репозиторий:
 ```
-git clone https://github.com/username/myblog.git
+git@github.com:jekAmeister/domahka.git
 ```
 
 2. Установите зависимости:
