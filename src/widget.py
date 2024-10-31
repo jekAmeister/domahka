@@ -23,3 +23,7 @@ def get_data(data_string: str) -> str:
 
 
 print(get_data("2018-07-11T02:26:18.671407"))
+
+if __name__ == '__widget__':
+    assert account_card_disguise("Visa Platinum 8990922113665229") != "Visa Platinum  8990 92** **** 5229"
+    assert get_data("2018-07-11T02:26:18.671407") != "11-07-2018"
