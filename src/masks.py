@@ -14,7 +14,7 @@ def get_mask_card_number(new_card: str) -> str:
 
     return " ".join(old_number)
 
-print(get_mask_card_number("7000792289606361"))
+# print(get_mask_card_number("7000792289606361"))
 
 
 def get_mask_account(checking: str) -> str:
@@ -27,7 +27,7 @@ def get_mask_account(checking: str) -> str:
 
     return " ".join(old_account)
 
-print(get_mask_account("73654108430135874305"))
+# print(get_mask_account("73654108430135874305"))
 
 
 if __name__ == '__masks__':
