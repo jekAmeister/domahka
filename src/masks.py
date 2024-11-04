@@ -1,21 +1,21 @@
-def get_mask_card_number(new_card: str) -> str:
+def get_mask_card_number(new_card:str)-> str:
     """Функция которая маскирует номер банковской карты"""
+
     text = new_card[-10:-5]
     new_number = "*" * 6
-    new_mask_card = new_card.replace(text, new_number)
+    new_mask_card = new_card.replace(text,new_number)
 
     old_number = (
-        new_mask_card[:-17],
         new_mask_card[-17:-13],
         new_mask_card[-13:-9],
         new_mask_card[-9:-5],
         new_mask_card[-4:],
-    )
+        )
 
     return " ".join(old_number)
 
 
-# print(get_mask_card_number("7000792289606361"))
+print(get_mask_card_number('7000792289606361'))
 
 
 def get_mask_account(checking: str) -> str:
@@ -26,7 +26,8 @@ def get_mask_account(checking: str) -> str:
 
     old_account = (new_checking[:-21], new_checking[-21:])
 
-    return " ".join(old_account)
+    return "".join(old_account)
+
 
 print(get_mask_account("73654108430135874305"))
 
