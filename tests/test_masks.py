@@ -1,16 +1,18 @@
+from _ast import arg
+from typing import Any, Type
+
 import pytest
 
 from src.masks import get_mask_account, get_mask_card_number
+from tests.conftest import test_input_argument, test_card_correct
 
 
-def test_get_mask_card_number(test_input_argument,test_card_correct) -> None:
+def test_get_mask_card_number(test_input_argument:list[Any],test_card_correct:str) -> None:
     """Тест на срабатывание функции при введении номера карты"""
     assert get_mask_card_number(test_input_argument) == test_card_correct
 
 
 """Параметризация функции get_mask_card_number"""
-
-
 @pytest.mark.parametrize(
     "value,expected",
     [
