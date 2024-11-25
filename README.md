@@ -45,8 +45,7 @@ python manage.py runserver
 '''
 poetry add --group dev pytest
 '''
-
-2. Пример результатов тестирования.
+2.Пример результатов тестирования.
 
 
 (domahka-py3.13) PS C:\Users\User\Downloads\domahka> pytest
