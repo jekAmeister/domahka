@@ -38,3 +38,28 @@ python manage.py runserver
 ## Лицензия:
 
 Проект распространяется под [лицензией MIT](LICENSE).
+
+## Тестирование:
+
+1.Чтобы установить pytest, используйте команды.
+'''
+poetry add --group dev pytest
+'''
+
+2. Пример результатов тестирования.
+
+
+(domahka-py3.13) PS C:\Users\User\Downloads\domahka> pytest
+test session starts 
+platform win32 -- Python 3.13.0, pytest-8.3.3, pluggy-1.5.0
+rootdir: C:\Users\User\Downloads\domahka
+configfile: pyproject.toml
+plugins: cov-6.0.0
+collected 23 items                                            
+
+tests\test_masks.py ......                              [ 26%]
+tests\test_processing.py ....                           [ 43%]
+tests\test_widget.py .............                      [100%]
+
+===================== 23 passed in 0.09s =====================
+(domahka-py3.13) PS C:\Users\User\Downloads\domahka>
