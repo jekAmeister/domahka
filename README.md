@@ -41,12 +41,12 @@ python manage.py runserver
 
 ## Тестирование:
 
-1.Чтобы установить pytest, используйте команды.
+1.Чтобы установить pytest, используйте команды:
 '''
 poetry add --group dev pytest
 '''
 
-2.Пример результатов тестирования.
+2.Пример результатов тестирования:
 '''
 (domahka-py3.13) PS C:\Users\User\Downloads\domahka> pytest
 test session starts 
