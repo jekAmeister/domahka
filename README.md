@@ -45,9 +45,9 @@ python manage.py runserver
 '''
 poetry add --group dev pytest
 '''
+
+'''
 2.Пример результатов тестирования.
-
-
 (domahka-py3.13) PS C:\Users\User\Downloads\domahka> pytest
 test session starts 
 platform win32 -- Python 3.13.0, pytest-8.3.3, pluggy-1.5.0
@@ -62,3 +62,4 @@ tests\test_widget.py .............                      [100%]
 
 ===================== 23 passed in 0.09s =====================
 (domahka-py3.13) PS C:\Users\User\Downloads\domahka>
+'''
