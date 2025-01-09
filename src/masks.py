@@ -19,7 +19,7 @@ def get_mask_card_number(new_card: str) -> str:
         return "Ошибка ввода"
 
 
-# print(get_mask_card_number("Maestro 1596837868705199"))
+print(get_mask_card_number("Maestro 1596837868705199"))
 
 
 def get_mask_account(checking: str) -> str:
