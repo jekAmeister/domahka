@@ -1,7 +1,4 @@
-
 from typing import Any
-from string import digits
-from random import choices
 
 transactions = [
     {
@@ -22,7 +19,6 @@ transactions = [
         "from": "Счет 19708645243227258542",
         "to": "Счет 75651667383060284188",
     },
-    {},
     {
         "id": 142264269,
         "state": "EXECUTED",
@@ -40,49 +36,52 @@ def filter_by_currency(transactions: list[dict], currency: str = "USD") -> Any:
     Функция должна возвращать итератор, который поочередно выдает транзакции,
     где валюта операции соответствует заданной (например, USD)."""
     for x in transactions:
-        if x.get("operationAmount") and x["operationAmount"]["currency"]["code"] == currency:
+       if x.get("operationAmount") and x["operationAmount"]["currency"]["code"] == currency:
+
             yield x
 
 
-x = filter_by_currency(transactions)
-# print(x)
+# for x in filter_by_currency(transactions):
+#
+#     print(x)
+x=filter_by_currency(transactions)
 
 print(next(x))
 print(next(x))
-
-
-def transaction_descriptions(transactions: list[dict]) -> Any:
-    '''Генератор который принимает список словарей с транзакциями
-    и возвращает описание каждой операции по очереди.'''
-    for x in transactions:
-        if x.get("description"):
-            yield x["description"]
-
-
-x = transaction_descriptions(transactions)
-
-# print(x)
-print(next(x))
-print(next(x))
-print(next(x))
-
-
-
-
-def card_number_generator():
-    cc_digits = choices(digits, k=16)
-    cc_number = "".join(cc_digits)
-    old_number = cc_number[:4] + " " + cc_number[4:8] + " " + cc_number[8:12] + " " + cc_number[12:16]
-    yield old_number
-
-x = card_number_generator()
-print(next(x))
-
-
-
-if __name__ == "__generators__":
-    assert filter_by_currency(transactions) == next(x)
-    assert transaction_descriptions(transactions) == next(x)
-    assert card_number_generator() == next(x)
-
-    # assert transaction_descriptions(transactions) == Перевод организации
+#
+#
+# def transaction_descriptions(transactions: list[dict]) -> Any:
+#     """Генератор который принимает список словарей с транзакциями
+#     и возвращает описание каждой операции по очереди."""
+#     for x in transactions:
+#         if x.get("description"):
+#             yield x["description"]
+#
+#
+# # for x in transaction_descriptions(transactions):
+# #     print(x)
+# x = transaction_descriptions(transactions)
+# print(next(x))
+# print(next(x))
+# print(next(x))
+#
+# def card_number_generator(start: int, stop: int) -> Any:
+#     """Функция которая выдает номера банковских карт в формате XXXX XXXX XXXX XXXX, где X— цифра номера карты.
+#     Генератор может сгенерировать номера карт в заданном диапазоне от 0000 0000 0000 0001 до 9999 9999 9999 9999.
+#      Генератор должен принимать начальное и конечное значения для генерации диапазона номеров."""
+#     for number in range(start, stop + 1):
+#         number_str = "0" * (16 - len(str(number))) + str(number)
+#         old_number = number_str[:4] + " " + number_str[4:8] + " " + number_str[8:12] + " " + number_str[12:16]
+#         result = old_number
+#         yield result
+#
+#
+# for x in card_number_generator(1, 5):
+#     print(x)
+#
+#
+# if __name__ == "__generators__":
+#
+#     assert filter_by_currency(transactions) == next(x)
+#     assert transaction_descriptions(transactions) == next(x)
+#     assert card_number_generator(1, 5) == next(x)
