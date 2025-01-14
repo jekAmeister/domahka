@@ -1,6 +1,7 @@
 from src.processing import filter_by_state,sort_by_date
 import pytest
 
+
 def test_filter_by_state(test_list_by_state,test_correct_answer) -> None:
     """Тест на срабатывание функции при введении корректных данных"""
     assert filter_by_state(test_list_by_state) == test_correct_answer
