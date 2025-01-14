@@ -39,10 +39,3 @@ def test_mask_account_card(input_data,expected_output) -> None:
 )
 def test_get_data(input_date,expected_output)-> None:
     assert get_data(input_date) == expected_output
-
-
-
-
-
-
-
