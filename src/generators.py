@@ -48,40 +48,40 @@ x=filter_by_currency(transactions)
 
 print(next(x))
 print(next(x))
-#
-#
-# def transaction_descriptions(transactions: list[dict]) -> Any:
-#     """Генератор который принимает список словарей с транзакциями
-#     и возвращает описание каждой операции по очереди."""
-#     for x in transactions:
-#         if x.get("description"):
-#             yield x["description"]
-#
-#
+
+
+def transaction_descriptions(transactions: list[dict]) -> Any:
+    """Генератор который принимает список словарей с транзакциями
+    и возвращает описание каждой операции по очереди."""
+    for x in transactions:
+        if x.get("description"):
+            yield x["description"]
+
+
 # # for x in transaction_descriptions(transactions):
 # #     print(x)
-# x = transaction_descriptions(transactions)
-# print(next(x))
-# print(next(x))
-# print(next(x))
-#
-# def card_number_generator(start: int, stop: int) -> Any:
-#     """Функция которая выдает номера банковских карт в формате XXXX XXXX XXXX XXXX, где X— цифра номера карты.
-#     Генератор может сгенерировать номера карт в заданном диапазоне от 0000 0000 0000 0001 до 9999 9999 9999 9999.
-#      Генератор должен принимать начальное и конечное значения для генерации диапазона номеров."""
-#     for number in range(start, stop + 1):
-#         number_str = "0" * (16 - len(str(number))) + str(number)
-#         old_number = number_str[:4] + " " + number_str[4:8] + " " + number_str[8:12] + " " + number_str[12:16]
-#         result = old_number
-#         yield result
-#
-#
-# for x in card_number_generator(1, 5):
-#     print(x)
-#
-#
-# if __name__ == "__generators__":
-#
-#     assert filter_by_currency(transactions) == next(x)
-#     assert transaction_descriptions(transactions) == next(x)
-#     assert card_number_generator(1, 5) == next(x)
+x = transaction_descriptions(transactions)
+print(next(x))
+print(next(x))
+print(next(x))
+
+def card_number_generator(start: int, stop: int) -> Any:
+    """Функция которая выдает номера банковских карт в формате XXXX XXXX XXXX XXXX, где X— цифра номера карты.
+    Генератор может сгенерировать номера карт в заданном диапазоне от 0000 0000 0000 0001 до 9999 9999 9999 9999.
+     Генератор должен принимать начальное и конечное значения для генерации диапазона номеров."""
+    for number in range(start, stop + 1):
+        number_str = "0" * (16 - len(str(number))) + str(number)
+        old_number = number_str[:4] + " " + number_str[4:8] + " " + number_str[8:12] + " " + number_str[12:16]
+        result = old_number
+        yield result
+
+
+for x in card_number_generator(1, 5):
+    print(x)
+
+
+if __name__ == "__generators__":
+
+    assert filter_by_currency(transactions) == next(x)
+    assert transaction_descriptions(transactions) == next(x)
+    assert card_number_generator(1, 5) == next(x)
